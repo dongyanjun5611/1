@@ -54,6 +54,11 @@ def get_week_day():
   week_day = week_list[datetime.date(today).weekday()]
   return week_day
 
+# 各种倒计时
+def get_counter_left(aim_date):
+  if aim_date is None:
+    return 0
+
 # 纪念日正数
 def get_memorial_days_count():
   if start_date is None:
