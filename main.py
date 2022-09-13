@@ -67,7 +67,15 @@ def get_counter_left(aim_date):
   if aim_date is None:
     return 0
 
- 
+  # 为了经常填错日期的同学们
+  if re.match(r'^\d{1,2}\-\d{1,2}$', aim_date):
+    next = datetime.strptime(str(date.today().year) + "-" + aim_date, "%Y-%m-%d")
+  elif re.match(r'^\d{2,4}\-\d{1,2}\-\d{1,2}$', aim_date):
+    next = datetime.strptime(aim_date, "%Y-%m-%d")
+    next = next.replace(nowtime.year)
+  else:
+    print('日期格式不符合要求')
+
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
