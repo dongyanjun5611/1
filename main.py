@@ -164,12 +164,12 @@ data = {
   },
   # 认识日期
   "love_days": {
-    "value": get_memorial_days_count(),
+    "value": get_memorial_days_count(aim_date),
     "color": get_random_color()
   },
   # 生日
   "birthday_left": {
-    "value": get_birthday_left(),
+    "value": get_birthday_left(aim_date),
     "color": get_random_color()
   },
   # 正计时
