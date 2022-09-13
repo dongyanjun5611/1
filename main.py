@@ -162,6 +162,16 @@ data = {
     "value": math.floor(weather['low']),
     "color": get_random_color()
   },
+  # 认识日期
+  "love_days": {
+    "value": get_memorial_days_count(),
+    "color": get_random_color()
+  },
+  # 生日
+  "birthday_left": {
+    "value": get_birthday_left(),
+    "color": get_random_color()
+  },
   # 正计时
   # "having_day": {
   #   "value": get_memorial_days_count(),
