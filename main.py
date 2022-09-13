@@ -15,7 +15,7 @@ today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
 start_date = os.getenv('START_DATE')
 city = os.getenv('CITY')
 # 生日，最终日倒数
-# birthday = os.getenv('BIRTHDAY')
+birthday = os.getenv('BIRTHDAY')
 end_date = os.getenv('END_DATE')
 
 app_id = os.getenv('APP_ID')
